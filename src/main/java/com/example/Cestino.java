@@ -10,8 +10,9 @@ public class Cestino {
         return valore;
     }
 
-    public void aggiungiMoneta(){
-        valore++;
+    synchronized public void aggiungiMoneta(){
+        int appo = valore + 1;
+        valore = appo;
     }
 
 
